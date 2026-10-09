@@ -23,6 +23,26 @@ with multi-dataset support, high-resolution patch training, sliding-window infer
 | HRF | 3504x2336 (patch) | 14 | **0.6690** | 0.7996 | 0.7785 | 0.8285 | 0.9686 |
 | FIVES | 2048x2048 (patch) | 200 | **0.7268** | 0.8291 | 0.8058 | 0.8749 | 0.9809 |
 
+### Visual comparison (original | ground truth | prediction)
+
+**DRIVE** (test sample 11, 512x512):
+
+![DRIVE](drive_11_test_0.png)
+
+**FIVES** (zoomed 1000x1000 crops, one per class — A: healthy, D: diabetic, G: glaucomatous, N: normal):
+
+![FIVES class A](fives_1_A_crop.png)
+
+![FIVES class D](fives_51_D_crop.png)
+
+![FIVES class G](fives_101_G_crop.png)
+
+![FIVES class N](fives_151_N_crop.png)
+
+**HRF** (test sample 15, stitched at original resolution 3504x2336):
+
+![HRF](hrf_15_dr.png)
+
 ## Quick Start
 
 ```bash
@@ -68,6 +88,9 @@ To use your own paths, edit the `SRC` variable at the top of the corresponding `
 ├── loss.py                    # Dice + BCE loss
 ├── utils.py                   # seeding / helpers
 ├── data_aug.py                # optional augmentation (requires albumentations)
+├── drive_11_test_0.png        # DRIVE result comparison
+├── fives_*_crop.png           # FIVES result comparisons (A/D/G/N)
+├── hrf_15_dr.png              # HRF result comparison
 └── requirements.txt
 ```
 
