@@ -1,0 +1,29 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.so
+
+# ===== 虚拟环境 / IDE =====
+.venv/
+venv/
+.idea/
+.vscode/
+*.iml
+
+# ===== 训练产物（体积大，不入库）=====
+files/
+results/
+results_hrf/
+results_fives/
+
+# ===== 预处理后的数据（不入库）=====
+new_data/
+hrf_full/
+fives_full/
+
+# ===== 数据集本体（本地路径，不入库）=====
+eyedata/
+
+# ===== 其他 =====
+*.log
+.DS_Store
